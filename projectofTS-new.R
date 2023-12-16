@@ -217,7 +217,19 @@ print(snaive_accuracy)
 print(regression_accuracy)
 print(tslm_accuracy)
 
-
+# forecast plots:
+library(ggfortify)
+naive_forecast |> autoplot(Data_tsibble) + 
+  labs(title=" naive forecast")‍
+‍
+snaive_forecast |> autoplot(Data_tsibble) + 
+  labs(title=" seasonal naive forecast")‍
+‍
+regression_forecast |> autoplot(Data_tsibble) + 
+  labs(title=" regression model forecast")‍
+‍
+tslm_forecast |> autoplot(Data_tsibble) + 
+  labs(title=" TSLM model forecast")
 
 
 
